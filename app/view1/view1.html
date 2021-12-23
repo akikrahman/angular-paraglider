@@ -1,1 +1,23 @@
-<p>This is the partial for view 1.</p>
+<link rel="stylesheet" href="view1/view1.css">
+<div class="header" >
+    <nav></nav>
+    <h1>The Paraglide</h1>
+  </div>
+
+  <div class="intro-text">
+    <p >
+     Pictures from paragliding in Oludeniz
+    </p>
+  </div>
+  
+  <div class="control-buttons">
+    <input type="button" class='btnImage' value="Play" ng-click="$ctrl.changePics()">
+    <input type="button" class='btnImage' value="Stop" ng-click="$ctrl.stopPics()">
+    <input type="button" class='btnImage' value="Restart" ng-click="$ctrl.restartPics()">
+  </div>
+  <p class="intro-text" id="updates"></p>
+   <img id="glideImg" class='image-gallery' src="/thumbnails/G0017968_thumbnail.jpg" alt="Click buttons to show paragliding pictures">  
+  <div class="footer">
+    <p>&#169; Akhlaqur Rahman 2021</p>
+  </div>
+</div>

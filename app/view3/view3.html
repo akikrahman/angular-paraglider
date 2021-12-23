@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="view2/view2.css">
+<link rel="stylesheet" href="view1/view1.css">
+<link rel="stylesheet" href="view3/view3.css">
+<div class="header">
+  <nav></nav>
+  <h1>The Paraglide</h1>
+</div>
+
+<div class="intro-text">
+  <p >Pictures from paragliding in Oludeniz </p>
+</div>
+<!--<div class="control-buttons">
+  <input type="button" class='btnImage' value="Load Pictures" ng-click="$ctrl.readPicsLocal()">
+</div> 
+<ul >
+  <li ng-repeat="file in $ctrl.filesnames">
+    <img ng-src="/thumbnails/{{file.name}}" />
+  </li>
+</ul>  -->
+<p class="intro-text">
+  Search Image Id:
+  <input ng-model="searchquery" />
+</p>
+
+  <table class="details">
+    <tr ng-repeat="file in $ctrl.filesnames  | filter: {id: searchquery}">
+      <td>{{ file.id }}</td>
+      <td>{{ file.name }}</td>
+      <td> <img ng-src="/thumbnails/{{file.name}}" /></td>
+    </tr>
+  </table>
+
+<div class="footer">
+  <p>&#169; Akhlaqur Rahman 2021</p>
+</div>
+
+
+

@@ -1,5 +1,35 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<link rel="stylesheet" href="view2/view2.css">
+<link rel="stylesheet" href="view1/view1.css">
+<div class="header" >
+  <nav></nav>
+  <h1>The Paraglide thumbnails</h1>
+</div>
+
+<div class="intro-text">
+  <p >
+   Click thumbnail to view
+  </p>
+</div>
+<!--<div class="control-buttons">
+  <input type="button" class='btnImage' value="Load thumbnails" ng-click="$ctrl.readPicsLocal()">
+</div>-->
+<div class="paragliding-images">
+  <img ng-src="{{$ctrl.mainImageUrl}}" class="phone" >
+</div>
+
+<div class="thumbs">
+  <ul class="paragliding-thumbs">
+    <li ng-repeat="file in $ctrl.filesnames">
+    
+      <figure><img alt="{{file.name}}" ng-src="/thumbnails/{{file.name}}" ng-click="$ctrl.setImage('/thumbnails/'+file.name)" />
+        <figcaption>{{file.id}}</figcaption>
+      </figure>
+    </li>
+  </ul>  
+</div>
+
+<div class="footer">
+  <p>&#169; Akhlaqur Rahman 2021</p>
+</div>
+
+

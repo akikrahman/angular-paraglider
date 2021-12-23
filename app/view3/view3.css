@@ -1,0 +1,19 @@
+.details {
+    margin-left: 25%;
+    border-style: double;
+    border-color: darkmagenta;
+}
+
+table, th , td {
+    border: 1px solid rgb(128, 128, 128);
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #5295e2;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #54bbf7;
+  }
