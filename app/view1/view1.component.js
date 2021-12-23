@@ -4,8 +4,8 @@ angular.
 module('view1').
 component('view1', {
   templateUrl: 'view1/view1.html',
-  controller: ['Pictures',
-    function view1Controller(Pictures) {
+  controller: ['$interval', 'Pictures',
+    function view1Controller($interval, Pictures) {
       var self = this;
       self.imagefile = [];
       self.index = 0;
@@ -14,6 +14,12 @@ component('view1', {
       self.filesnames = Pictures.query();
       self.max = self.filesnames.length;
       self.imageurl = '/thumbnails/G0017968_thumbnail.jpg';
+
+      self.theTime = new Date().toLocaleTimeString();
+
+      $interval(function () {
+        self.theTime = new Date().toLocaleTimeString();
+      }, 1000);
 
       self.readPicsLocal = function readPicsLocal(){
         self.it = self.filesnames[Symbol.iterator]();
