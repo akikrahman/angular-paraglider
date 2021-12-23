@@ -1,6 +1,8 @@
 # `angular-paraglider`
 
-This project is an AngularJS application that shows pictures of my paragliding experience
+This project is an AngularJS application that shows pictures of my paragliding experience.
+
+This project was initially cloned from the Angular Seed project (https://github.com/angular/angular-seed)
 
 ## Getting Started
 
